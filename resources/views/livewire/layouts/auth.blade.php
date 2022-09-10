@@ -1,6 +1,10 @@
 @guest()
-    <a href="/login" class="font-p mr-auto self-center hover:underline lg:flex">
+    <a href="{{ route('login') }}" class="font-p mr-auto self-center hover:underline lg:flex">
         Авторизация
+    </a>
+
+    <a href="{{ route('register') }}" class="font-p mr-auto self-center hover:underline lg:flex">
+        Регистрация
     </a>
 @endguest
 

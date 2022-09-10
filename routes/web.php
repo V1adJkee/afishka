@@ -26,5 +26,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // TODO: Выпиоить Юзлес фигня (есть в Auth::routes())
 Route::get('/lk-logout', [AppController::class, 'logout'])->name('lk-logout');
 
-Request::get('/events', [EventController::class, 'index'])->name('events');
+Route::get('/events', [EventController::class, 'index'])->name('events');
 

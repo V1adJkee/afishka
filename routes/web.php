@@ -22,3 +22,6 @@ Route::get('/search', [Search::class, 'index']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// TODO: Юзлес фигня (есть в Auth::routes())
+Route::get('/lk-logout', [AppController::class, 'logout'])->name('lk-logout');

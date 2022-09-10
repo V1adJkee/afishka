@@ -16,3 +16,4 @@ use App\Http\Controllers\AppController;
 */
 
 Route::get('/', [AppController::class, 'index']);
+Route::get('/search', [Search::class, 'index']);

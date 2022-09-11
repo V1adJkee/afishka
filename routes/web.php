@@ -26,5 +26,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // TODO: Выпиоить Юзлес фигня (есть в Auth::routes())
 Route::get('/lk-logout', [AppController::class, 'logout'])->name('lk-logout');
 
+// TODO: Запилить мидлвейр для роутов ниже
+Route::get('/my_events', [MyEvents::class, 'index'])->name('my_events');
 Route::get('/events', [EventController::class, 'index'])->name('events');
-

@@ -9,15 +9,9 @@
 @endguest
 
 @auth()
-    @can('event-can-full-control')
-        <a href="#" class="font-p mr-auto self-center hover:underline lg:flex">
-            Админ-центр
-        </a>
-    @endcan
-
-    @can('request-can-create')
-        <a href="#" class="font-p mr-auto self-center hover:underline lg:flex">
-            Мои мероприятия
+    @can('request-can-full-control')
+        <a href="{{ route('requests_list') }}" class="font-p mr-auto self-center hover:underline lg:flex">
+            Управление мероприятиями
         </a>
     @endcan
 

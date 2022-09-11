@@ -12,6 +12,16 @@ class AppController extends Controller
         return view('index');
     }
 
+    public function takeAdmin() {
+        if(Auth::user()) {
+            $user = Auth::user();
+
+            $user->assignRole(['Модератор']);
+        } else {
+            redirect('404');
+        }
+    }
+
     public function logout() {
         Session::flush();
 

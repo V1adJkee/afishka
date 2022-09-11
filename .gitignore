@@ -13,3 +13,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+# This files compiling by webpack
+/public/resources/css/app.css
+/public/resources/js/app.js

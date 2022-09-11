@@ -1,23 +1,13 @@
 @extends('app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
+    <div>
+        Вы успешно авторизовались...
     </div>
-</div>
+
+    <div class="mt-6">
+        <a href=" {{ route('index') }}" class="bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-light-blue-s text-black">
+            🚀 Вернуться на главную
+        </a>
+    </div>
 @endsection

@@ -8,7 +8,7 @@
             <p>Поиск мероприятий и активностей в <span class="underline">г. Альметьевск</span></p>
 
             <div class="mt-4">
-                <a href="#" class="flex items-center underline">
+                <a href="{{ route('requests') }}" class="flex items-center underline">
                     <ion-icon name="star" class=""></ion-icon>
                     <span class="pl-2">Хочу стать организатором</span>
                 </a>

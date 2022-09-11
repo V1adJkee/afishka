@@ -16,12 +16,16 @@ use App\Http\Controllers\AppController;
 |
 */
 
-Route::get('/', [AppController::class, 'index']);
+Route::get('/', [AppController::class, 'index'])->name('index');
 Route::get('/search', [Search::class, 'index']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// TODO: Передалать на Partial Resource Routes (https://laravel.com/docs/9.x/controllers)
+Route::get('/requests', [\App\Http\Controllers\Requests::class, 'index'])->name('requests');
+Route::post('/requests/create', [\App\Http\Controllers\Requests::class, 'create'])->name('requests_create');
 
 // TODO: Выпиоить Юзлес фигня (есть в Auth::routes())
 Route::get('/lk-logout', [AppController::class, 'logout'])->name('lk-logout');

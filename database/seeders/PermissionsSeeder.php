@@ -41,14 +41,19 @@ class PermissionsSeeder extends Seeder
         ]);
 
         // For organizer
+        $eventRequestCanCreate = Permission::create([
+            'name' => 'event-can-create'
+        ]);
+        $eventRequestCanCancel = Permission::create([
+            'name' => 'event-can-cancel'
+        ]);
+        $eventRequestCanEdit = Permission::create([
+            'name' => 'event-can-edit'
+        ]);
+
+        // For user
         $permissionRequestCanCreate = Permission::create([
             'name' => 'request-can-create'
-        ]);
-        $permissionRequestCanCancel = Permission::create([
-            'name' => 'request-can-cancel'
-        ]);
-        $permissionRequestCanEdit = Permission::create([
-            'name' => 'request-can-edit'
         ]);
 
         // Give permission for roles
@@ -57,8 +62,11 @@ class PermissionsSeeder extends Seeder
         $moderatorRole->givePermissionTo($permissionRequestCanFullControl);
 
         // For organizer
-        $organizerRole->givePermissionTo($permissionRequestCanCreate);
-        $organizerRole->givePermissionTo($permissionRequestCanCancel);
-        $organizerRole->givePermissionTo($permissionRequestCanEdit);
+        $organizerRole->givePermissionTo($eventRequestCanCreate);
+        $organizerRole->givePermissionTo($eventRequestCanCreate);
+        $organizerRole->givePermissionTo($eventRequestCanEdit);
+
+        // For user
+        $userRole->givePermissionTo($permissionRequestCanCreate);
     }
 }

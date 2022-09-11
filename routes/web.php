@@ -26,6 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // TODO: Передалать на Partial Resource Routes (https://laravel.com/docs/9.x/controllers)
 Route::get('/requests', [\App\Http\Controllers\Requests::class, 'index'])->name('requests');
 Route::post('/requests/create', [\App\Http\Controllers\Requests::class, 'create'])->name('requests_create');
+Route::get('/requests/list', [App\Http\Livewire\Requests\ListView::class, 'render'])->name('requests_list');
 
 // TODO: Выпиоить Юзлес фигня (есть в Auth::routes())
 Route::get('/lk-logout', [AppController::class, 'logout'])->name('lk-logout');
@@ -33,3 +34,6 @@ Route::get('/lk-logout', [AppController::class, 'logout'])->name('lk-logout');
 // TODO: Запилить мидлвейр для роутов ниже
 Route::get('/my_events', [MyEvents::class, 'index'])->name('my_events');
 Route::get('/events', [EventController::class, 'index'])->name('events');
+
+//
+Route::get('/take-admin', [AppController::class, 'takeAdmin'])->name('take-admin');
